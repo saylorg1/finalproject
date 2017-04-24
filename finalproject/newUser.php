@@ -7,8 +7,8 @@ $email=$_POST['Email'];
  
 //Execute the query
  
-//mysqli_query($connect(INSERT INTO login(Username,Password)
-				//VALUES('$username','$password')));
+mysqli_query($connect(INSERT INTO login(Username,Password)
+				VALUES('$username','$password')));
 ?>
 <!DOCTYPE html>
 <html lang = "en">

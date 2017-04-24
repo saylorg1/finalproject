@@ -6,7 +6,7 @@ $password = 'WrGfjvYa';
 
 $database = new PDO('mysql:host=csweb.hh.nku.edu;dbname=db_spring17_saylorg1', $user, $password);
 function my_autoloader($class){
-	include '/classes/class.' . $class . '.php';
+include '/classes/class.' . $class . '.php';
 }
 include ('functions.php') ;
 spl_autoload_register('my_autoloader');

@@ -16,10 +16,3 @@
 	<input type="reset" name="reset" value="Reset"></div>
 </form>
 </body>
-<?php
-$password=['password1'];
-$newpassword=['password2'];
-if ($password==$newpassword){
-	$q=insert
-}
-?>

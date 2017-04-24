@@ -1,10 +1,7 @@
 <?php
 
 // Create and include a configuration file with the database connection
-include('config.php');
-
-// Include functions for application
-include('functions.php');
+include('config.php');    
 
 // If form submitted:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -12,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
-	// Query records that have usernames and passwords that match those in the customers table
+	// Query records that have usernames and passwords that match those in the login table
 	$sql = file_get_contents('sql/attemptLogin.sql');
 	$params = array(
 		'username' => $username,
@@ -46,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<meta name="description" content="The HTML5 Herald">
 	<meta name="author" content="SitePoint">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type= "text/css" href="css/mystyle1.css">
 
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -61,5 +58,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<input type="submit" value="Log In" />
 		</form>
 	</div>
+	<div class="page">
+	<p>Need to change your password?</p>
+	<h4><a href="changepassword.php">Change Password</a></h4>
+	<p>First time user?</p>
+	<h4><a href="newUser.php">New Users</a></h4>
 </body>
 </html>

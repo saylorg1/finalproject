@@ -1,3 +1,1 @@
-select * 
-from bearing 
-where Serial_Number is NOT NULL;
+select * from bearing where Serial_Number is NOT NULL;
